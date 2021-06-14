@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <title>online-shop</title>
+</head>
+<body>
+<h1 >Dear user, your order: </h1>
+<ol>
+    <p th:each="item : ${order}">
+    <li th:inline="text">[[${item.name}]]: [[${item.description}]]</li>
+    </p>
+</ol>
+</body>
+</html>
